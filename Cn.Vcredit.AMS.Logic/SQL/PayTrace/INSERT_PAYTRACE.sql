@@ -1,0 +1,30 @@
+﻿--插入PayTrace
+INSERT INTO dbo.PayTrace
+(
+	PayKind,
+	FileName,
+	DayNo,
+	[Content],
+	CallDirection,
+	CallMethod,
+	RequestState,
+	PayTraceAmount,
+	OperatorID,
+	CompanyKey,
+	ServiceSideID,
+	LendingSideID,
+	TraceTime,
+	ResponseTime,
+	ResponseNum,
+	ResponseDesc,
+	LockKey,
+	FileNum,
+	RequestAmount,
+	AccountID,
+	IncomeType,
+	PeriodType,
+	TaskKey,
+	PayReason
+)
+VALUES({0},'{1}',{2},'{3}',{4},{5},{6},{7},{8},'{9}',
+{10},{11},'{12}','{13}','{14}','{15}','{16}',{17},{18},{19},{20},{21},'{22}',{23})

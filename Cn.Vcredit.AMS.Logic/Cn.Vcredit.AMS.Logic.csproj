@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3FB2FE17-83C5-4162-9A50-A0E7AF060C51}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cn.Vcredit.AMS.Logic</RootNamespace>
+    <AssemblyName>Cn.Vcredit.AMS.Logic</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\FinanceProducts\CarMortgageLoan.cs" />
+    <Compile Include="BLL\FinanceProducts\ChengDuULoan.cs" />
+    <Compile Include="BLL\FinanceProducts\FoticBuildingMortgage.cs" />
+    <Compile Include="BLL\FinanceProducts\FundFromGKHChengDuULoan.cs" />
+    <Compile Include="BLL\FinanceProducts\ProductFactory.cs" />
+    <Compile Include="BLL\FinanceProducts\UnsecuredLoan.cs" />
+    <Compile Include="BLL\FinanceProducts\VcreditProduct.cs" />
+    <Compile Include="BLL\PayBank\BankFactory.cs" />
+    <Compile Include="BLL\PayBank\BaseDataSource.cs" />
+    <Compile Include="BLL\PayBank\Export\BankExportEight.cs" />
+    <Compile Include="BLL\PayBank\Export\BankExportFive.cs" />
+    <Compile Include="BLL\PayBank\Export\BankExportFour.cs" />
+    <Compile Include="BLL\PayBank\Export\BankExportOne.cs" />
+    <Compile Include="BLL\PayBank\Export\BankExportSeven.cs" />
+    <Compile Include="BLL\PayBank\Export\BankExportSix.cs" />
+    <Compile Include="BLL\PayBank\Export\BankExportThree.cs" />
+    <Compile Include="BLL\PayBank\Export\BankExportTwo.cs" />
+    <Compile Include="BLL\PayBank\Export\ExportTemplate.cs" />
+    <Compile Include="BLL\PayBank\Export\ExportTemplate2.cs" />
+    <Compile Include="BLL\PayBank\Inport\BankImportFive.cs" />
+    <Compile Include="BLL\PayBank\Inport\BankImportFour.cs" />
+    <Compile Include="BLL\PayBank\Inport\BankImportOne.cs" />
+    <Compile Include="BLL\PayBank\Inport\BankImportSix.cs" />
+    <Compile Include="BLL\PayBank\Inport\BankImportThree.cs" />
+    <Compile Include="BLL\PayBank\Inport\BankImportTwo.cs" />
+    <Compile Include="BLL\PayBank\Inport\ImportTemplate.cs" />
+    <Compile Include="BLL\PayBank\StringDataSource.cs" />
+    <Compile Include="Common\LogicConst.cs" />
+    <Compile Include="Common\LogicUtility.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\BadTransfer\BadTransferAuditService.cs" />
+    <Compile Include="Service\BadTransfer\BadTransferDetailService.cs" />
+    <Compile Include="Service\BadTransfer\BadTransferRejectService.cs" />
+    <Compile Include="Service\BadTransfer\BadTransferSearchService.cs" />
+    <Compile Include="Service\BaseService.cs" />
+    <Compile Include="Service\BusinessSearchService.cs" />
+    <Compile Include="Service\NoneService.cs" />
+    <Compile Include="Service\OutPayBankInstructionService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cn.Vcredit.AMS.Common\Cn.Vcredit.AMS.Common.csproj">
+      <Project>{d610dc43-3590-40f7-b0a6-d8c049934af3}</Project>
+      <Name>Cn.Vcredit.AMS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cn.Vcredit.AMS.DataAccess\Cn.Vcredit.AMS.DataAccess.csproj">
+      <Project>{719039bb-08d7-4a93-a1cf-40b510a8d542}</Project>
+      <Name>Cn.Vcredit.AMS.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cn.Vcredit.AMS.Data\Cn.Vcredit.AMS.Data.csproj">
+      <Project>{6e134fef-d4ec-4c7c-bdd2-d5c364a0d5fd}</Project>
+      <Name>Cn.Vcredit.AMS.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cn.Vcredit.Common\Cn.Vcredit.Common.csproj">
+      <Project>{2900407b-4047-4644-9db2-2807560a941d}</Project>
+      <Name>Cn.Vcredit.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="SQL\AdvCLoanCancel\SELECT_BUSINESS_ADVCLOANING.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\AdvCLoanCancel\UPDATE_BUSINESS_FORADVCLOAN.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\BankExport\PayBankBH.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\BankExport\PayBankBusinessLock.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\BankExport\PayBankChengdu.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\BankExport\PayBankDWJM.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\BankExport\PayBankDWJM_Guarantee.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\BankExport\PayBankDWJM_Normal.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\BankExport\PayBankService.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\CreateDeductRecord.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\DunModuleSQL\EXPORT_OVERDUESTATIC.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\DunModuleSQL\INSERT_SAVINGCARDCHANGE_HISTORY.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\DunModuleSQL\INSERT_SAVINGCARDCHANGE_HISTORY_AUDIT.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\DunModuleSQL\SELECT_GuaranteeItemByBusinessID.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\EXPORT_DUNLIST.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\EXPORT_SAVINGCARDCHANGELIST.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\INSERT_BILLITEM_BUCKLEFAIL.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\INSERT_CUSTRACK.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\INSERT_Deduct_HandDeductSequence.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\INSERT_DUNLOG.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\INSERT_DUN_DUN2BILL.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\INSERT_PENALTYINT_BILLITEM.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\INSERT_PENALTYINT_EVERYDAY_BYBID.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\INSERT_PENALTYINT_FORDAY.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\INSERT_PENALTYINT_PUNISHSUBJECT.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\INSERT_PHONELIST.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\INSERT_RECEIVED_HTTPDEDUCT.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\INSERT_RECEIVED_HTTPLITIGATIONDEDUCT.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\PayTrace\INSERT_PAYTRACE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForBank\ReceivedBank_Insert_BillItem.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForBank\ReceivedBank_Insert_Business.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForBank\ReceivedBank_Update_BillItem.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForBank\ReceivedBank_Update_Business.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForBank\RECEIVED_BILL_DOWN.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForBank\SELECT_RECEIVED_BHXT_Bill.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForBank\SELECT_RECEIVED_BHXT_Business.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForBank\SELECT_RECEIVED_BHXT_Current.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForBank\SELECT_RECEIVED_Chengdu.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForBank\SELECT_RECEIVED_DWJM.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForBank\SELECT_RECEIVED_Service.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForPayDay\Payment_DWJM_Normal\AdvPaymentDay_DWJM_Normal.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForPayDay\Payment_DWJM_Normal\CurrentPtinPaymentDay_DWJM_Normal.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForPayDay\Payment_DWJM_Normal\PaymentDay_DWJM_Normal.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForPayDay\Payment_DWJM_Normal\PaymentDay_DWJM_Normal_BusinessLock.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForPayDay\Payment_Other_ALL\AdvPaymentDay_Other_ALL.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForPayDay\Payment_Other_ALL\CurrentPtinPaymentDay_Other_ALL.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForPayDay\Payment_Other_ALL\PaymentDay_Other_ALL.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForPayDay\Payment_Other_ALL\PaymentDay_Other_ALL_BusinessLock.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForPayDay\ReceivedPayDay_Insert.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForPayDay\ReceivedPayDay_Update.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForPayDay\SELECT_PAYACCOUNT_TOP.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ReceivedForPayDay\SELECT_RECEIVED_Bill.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\CDWS\AdvPaymentRelativeDay.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\CDWS\INSERT_BILLITEM_PUNISHSUBJECT.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\CDWS\INSERT_DUN_ALL.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\CDWS\INSERT_DUN_ALL_HISTORY.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\CDWS\INSERT_DUN_DUNLOG.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\CDWS\INSERT_PENALTYINT_EVERYDAY.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\CDWS\LastPaymentRelativeDay.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\CDWS\PaymentRelativeDay.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\CDWS\PaymentRelativeDayBusinessLock.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\CDWS\ReceivedRelativeDay_Insert.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\CDWS\ReceivedRelativeDay_Update.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\CDWS\SELECT_BUSINESS_BYTODAYACTIVE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\CDWS\SELECT_DUN_TODAY.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\CDWS\UPDATE_BILLITEM_ADDBILLID.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\CDWS\UPDATE_BILL_CURRENTOVER.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\CDWS\UPDATE_BILL_PAYSTATUS.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\CDWS\UPDATE_BUSINESS_ALLCHANGE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\CDWS\UPDATE_BUSINESS_CLOAN.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\CDWS\UPDATE_BUSINESS_FORADVCLOAN.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\CDWS\UPDATE_BUSINESS_TOTALDUE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\DWJM\AdvPaymentRelativeDay.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\DWJM\INSERT_BILLITEM_PUNISHSUBJECT.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\DWJM\INSERT_DUN_ALL.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\DWJM\INSERT_DUN_ALL_HISTORY.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\DWJM\INSERT_DUN_DUNLOG.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\DWJM\INSERT_PENALTYINT_EVERYDAY.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\DWJM\LastPaymentRelativeDay.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\DWJM\PaymentRelativeDay.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\DWJM\PaymentRelativeDayBusinessLock.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\DWJM\ReceivedRelativeDay_Insert.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\DWJM\ReceivedRelativeDay_Update.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\DWJM\SELECT_BUSINESS_BYTODAYACTIVE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\DWJM\SELECT_DUN_TODAY.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\DWJM\UPDATE_BILLITEM_ADDBILLID.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\DWJM\UPDATE_BILL_CURRENTOVER.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\DWJM\UPDATE_BILL_PAYSTATUS.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\DWJM\UPDATE_BUSINESS_ALLCHANGE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\DWJM\UPDATE_BUSINESS_CLOAN.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\DWJM\UPDATE_BUSINESS_FORADVCLOAN.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\DWJM\UPDATE_BUSINESS_TOTALDUE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\AdvPaymentRelativeDay.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\INSERT_BILLITEM_PUNISHSUBJECT.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\INSERT_DUN_ALL.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\INSERT_DUN_ALL_HISTORY.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\INSERT_DUN_DUNLOG.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\INSERT_PENALTYINT_EVERYDAY.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\InsureBalanceToBefore.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\InsurePaymentRelativeDay.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\PaymentRelativeDay.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\PaymentRelativeDayBusinessLock.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\ReceivedPayDay_Insert.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\ReceivedPayDay_Insure_Insert.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\ReceivedPayDay_Insure_Update.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\ReceivedPayDay_Update.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\ReceivedRelativeDay_Insert.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\ReceivedRelativeDay_Update.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\SELECT_BUSINESS_BYTODAYACTIVE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\SELECT_DUN_TODAY.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\UPDATE_BILLITEM_ADDBILLID.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\UPDATE_BILL_CURRENTOVER.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\UPDATE_BILL_PAYSTATUS.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\UPDATE_BUSINESS_ALLCHANGE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\UPDATE_BUSINESS_CLOAN.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\UPDATE_BUSINESS_FORADVCLOAN.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\MortgageLoan\UPDATE_BUSINESS_TOTALDUE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\SqlSteps\UPDATE_BUSINESS_TOTALDUE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\UPDATE_BUSINESS_CLOAN.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\RelativeDay\UPDATE_BUSSINESS_FORADVCLOAN.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SELECT_ADVRECEIVED_SUBJECTSPUSH.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SELECT_BILLITEM_BYBILLGROUP.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SELECT_BILLITEM_SUBJECTSPUSH.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SELECT_BILL_BILLITEM_RECEIVED.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SELECT_BUSINESS_FORINSERTBILLS.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SELECT_BUSINESS_FORISFROZEN.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SELECT_BUSINESS_GUARANTEEDATA.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SELECT_BUSINESS_IdFORISFROZEN.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SELECT_COMPANYADDRESS.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SELECT_DUN_RECEIVED_FORBUSINESSID.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SELECT_KEHUFUWUBU_EMPLOYEE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SELECT_MyDun.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SELECT_PayBank_ECEIVED.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SELECT_RECEIVED_SUBJECTSPUSH.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SELECT_VIEWUNDUEEXTPIVOT.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SubjectPush\SELECT_BILLITEM_CHENGDU.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SubjectPush\SELECT_BILLITEM_PENALTYINT.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SubjectPush\SELECT_RECEIVED_ADVCLOAN.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SubjectPush\SELECT_RECEIVED_CHENGDU.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SubjectPush\SELECT_RECEIVED_PENALTYINT.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\SubjectPush\SELECT_RECEIVED_SHANGHAI.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\TenpayProtocoSelect.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\Total\SELECT_PROCEEDSDATA.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\UPDATEIMPORT_DUNNUM.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\UPDATE_BILLITEM_ADDBILLID.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\UPDATE_BILL_BILLITEM_ISCURRENT.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\UPDATE_BILL_PAYSTATUS.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\UPDATE_BUSINESS_CLOAN.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\UPDATE_BUSINESS_FORBUSINESSID.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\UPDATE_BUSINESS_TOGUARANTEE_OVERCAP.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\UPDATE_BUSINESS_TOTALDUE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\UPDATE_BUSSINESS_FORADVCLOAN.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\UPDATE_PHONELOG_STATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

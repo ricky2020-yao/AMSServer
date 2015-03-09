@@ -1,0 +1,1 @@
+UPDATE fin.SyncInfo SET HadSyncTime='{1}' WHERE TableViewName='{0}'

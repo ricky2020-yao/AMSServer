@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{52CA6BA5-F02B-4BBD-B91A-2EEA81AAF749}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cn.Vcredit.AMS.FulfilGuaranteeService</RootNamespace>
+    <AssemblyName>Cn.Vcredit.AMS.FulfilGuaranteeService</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Exe\Services\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Exe\Services\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cn.Vcredit.AMS.BaseService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.AMS.BaseService.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.AMS.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.AMS.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.AMS.Controller, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.AMS.Controller.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.AMS.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.AMS.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.AMS.DataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.AMS.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.AMS.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.AMS.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Page\PostLoan\ShareLib\Cn.Vcredit.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\CancelRefundExportBLL.cs" />
+    <Compile Include="BLL\CancelRefundSaveBLL.cs" />
+    <Compile Include="DAL\CancelRefundExportDAL.cs" />
+    <Compile Include="DAL\CancelRefundSaveDAL.cs" />
+    <Compile Include="DAL\CancelRefundSearchDAL.cs" />
+    <Compile Include="DAL\FulfilGuaranteeSaveDAL.cs" />
+    <Compile Include="DAL\FulfilGuaranteeSearchDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\CancelRefundExportService.cs" />
+    <Compile Include="Service\CancelRefundSaveService.cs" />
+    <Compile Include="Service\CancelRefundSearchService.cs" />
+    <Compile Include="Service\FulfilGuaranteeSaveService.cs" />
+    <Compile Include="Service\FulfilGuaranteeSearchService.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

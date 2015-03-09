@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{079A2C41-8D84-4E8B-9554-4F9E8723A052}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cn.Vcredit.AMS.RelativeDaySearchDunService</RootNamespace>
+    <AssemblyName>Cn.Vcredit.AMS.RelativeDaySearchDunService</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Exe\Services\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=5.3.1.0, Culture=neutral, PublicKeyToken=9ec0ff091d04b091, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.AMS.BaseService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.AMS.BaseService.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.AMS.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.AMS.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.AMS.Controller, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.AMS.Controller.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.AMS.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.AMS.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.AMS.DataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.AMS.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.AMS.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.AMS.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\AdaptationCardSearchBLL.cs" />
+    <Compile Include="BLL\DunDetailExportBLL.cs" />
+    <Compile Include="BLL\RelativeDayDunExportBLL.cs" />
+    <Compile Include="BLL\RelativeDayDunSearchBLL.cs" />
+    <Compile Include="BLL\RelativeDayDunTaskExportBLL.cs" />
+    <Compile Include="Common\Utility.cs" />
+    <Compile Include="DAL\AdaptationCardDeleteDAL.cs" />
+    <Compile Include="DAL\AdaptationCardInsertDAL.cs" />
+    <Compile Include="DAL\DunAdaptationCardDAL.cs" />
+    <Compile Include="DAL\DunBillDetailDAL.cs" />
+    <Compile Include="DAL\DunBillItemDetailDAL.cs" />
+    <Compile Include="DAL\DunBusinessDetailDAL.cs" />
+    <Compile Include="DAL\DunDetailExportDAL.cs" />
+    <Compile Include="DAL\DunPenaltyIntDetailDAL.cs" />
+    <Compile Include="DAL\DunReceiveDetailDAL.cs" />
+    <Compile Include="DAL\RelativeDayDunExportDAL.cs" />
+    <Compile Include="DAL\RelativeDayDunSearchDAL.cs" />
+    <Compile Include="DAL\RelativeDayDunTaskExportDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\AdaptationCardAddService.cs" />
+    <Compile Include="Service\AdaptationCardDeleteService.cs" />
+    <Compile Include="Service\AdaptationCardSearchService.cs" />
+    <Compile Include="Service\DunDetailExportService.cs" />
+    <Compile Include="Service\DunPenaltyIntSearchService.cs" />
+    <Compile Include="Service\RelativeDayDunExportService.cs" />
+    <Compile Include="Service\RelativeDayDunSearchService.cs" />
+    <Compile Include="Service\RelativeDayDunTaskExportService.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="SQL\DunModuleSQL\SELECT_DUN_RECEIVED_FORBUSINESSID.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\DunModuleSQL\SELECT_GetDunListForRelativeDay.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

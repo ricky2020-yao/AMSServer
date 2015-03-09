@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EEDB0875-A9D6-4293-8E84-A5B435F7A6EF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cn.Vcredit.AMS.DunSearchService</RootNamespace>
+    <AssemblyName>Cn.Vcredit.AMS.DunSearchService</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cn.Vcredit.AMS.BaseService">
+      <HintPath>..\Exe\Cn.Vcredit.AMS.BaseService.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.AMS.Common">
+      <HintPath>..\Exe\Cn.Vcredit.AMS.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.AMS.Data">
+      <HintPath>..\Exe\Cn.Vcredit.AMS.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.AMS.DataAccess">
+      <HintPath>..\Exe\Cn.Vcredit.AMS.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\DunSearchBLL.cs" />
+    <Compile Include="DAL\DunSearchDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\RelativeDaySearchDunService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cn.Vcredit.AMS.Entity\Cn.Vcredit.AMS.Entity.csproj">
+      <Project>{3a8521a0-4161-4d80-856e-8b3ee14e1725}</Project>
+      <Name>Cn.Vcredit.AMS.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

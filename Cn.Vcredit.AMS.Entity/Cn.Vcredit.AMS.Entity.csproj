@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3A8521A0-4161-4D80-856E-8B3EE14E1725}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cn.Vcredit.AMS.Entity</RootNamespace>
+    <AssemblyName>Cn.Vcredit.AMS.Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Exe\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Exe\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cn.Vcredit.AMS.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.AMS.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cn.Vcredit.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Communication\CommunicationConsts.cs" />
+    <Compile Include="Communication\CommunicationEntity.cs" />
+    <Compile Include="Communication\ReponseResult\ResponseExportResult.cs" />
+    <Compile Include="Communication\ReponseResult\ResponseFileResult.cs" />
+    <Compile Include="Communication\ReponseResult\ResponseListResult.cs" />
+    <Compile Include="Communication\ReponseResult\ResponseResult.cs" />
+    <Compile Include="Communication\RequestEntity.cs" />
+    <Compile Include="Communication\RequestSpecialEntity\RequestDataEntity.cs" />
+    <Compile Include="Communication\ResponseEntity.cs" />
+    <Compile Include="Communication\ResponseHead.cs" />
+    <Compile Include="Filter\BaseExportFilter.cs" />
+    <Compile Include="Filter\BaseFilter.cs" />
+    <Compile Include="Filter\BillDun\AdaptationCardFilter.cs" />
+    <Compile Include="Filter\BillDun\BusinessGuaranteeFilter.cs" />
+    <Compile Include="Filter\BillDun\BusinessGuaranteeSaveFilter.cs" />
+    <Compile Include="Filter\BillDun\ClearLoanReasonSaveFilter.cs" />
+    <Compile Include="Filter\BillDun\ClearLoanReasonSearchFilter.cs" />
+    <Compile Include="Filter\BillDun\DunSearchFilter.cs" />
+    <Compile Include="Filter\BillDun\EveryDueRepayReportSearchFilter.cs" />
+    <Compile Include="Filter\BillDun\EveryDueReportFilter.cs" />
+    <Compile Include="Filter\BillDun\ExportBusinessListFilter.cs" />
+    <Compile Include="Filter\BillDun\ExportGuaranteeDataFilter.cs" />
+    <Compile Include="Filter\BillDun\QueryGuarBusinessFilter.cs" />
+    <Compile Include="Filter\BillDun\RelativeDayExportDunFilter.cs" />
+    <Compile Include="Filter\BillDun\RelativeDaySearchDunFilter.cs" />
+    <Compile Include="Filter\BillDun\SavingCardChangeFilter.cs" />
+    <Compile Include="Filter\BillDun\SavingCardChangeUpdateFilter.cs" />
+    <Compile Include="Filter\Common\QueryEnumerationFilter.cs" />
+    <Compile Include="Filter\Common\SyncTableFilter.cs" />
+    <Compile Include="Filter\CustomerService\CustomerSearchFilter.cs" />
+    <Compile Include="Filter\CustomerService\DeductRemindExportFilter.cs" />
+    <Compile Include="Filter\ExamineIMP\OverDueDetailFilter.cs" />
+    <Compile Include="Filter\ExamineIMP\OverDueReportFilter.cs" />
+    <Compile Include="Filter\FinanceManage\BadTransferFilter.cs" />
+    <Compile Include="Filter\FinanceManage\BusinessExportFilter.cs" />
+    <Compile Include="Filter\FinanceManage\CancelRefundExportFilter.cs" />
+    <Compile Include="Filter\FinanceManage\CancelRefundFilter.cs" />
+    <Compile Include="Filter\FinanceManage\CancelRefundUpdateFilter.cs" />
+    <Compile Include="Filter\FinanceManage\DeriveRecBankDeductFilter.cs" />
+    <Compile Include="Filter\FinanceManage\DeriveRecExportFilter.cs" />
+    <Compile Include="Filter\FinanceManage\DeriveSevExportFilter.cs" />
+    <Compile Include="Filter\FinanceManage\GuaranteeBatchFilter.cs" />
+    <Compile Include="Filter\FinanceManage\GuaranteeBatchUpdateFilter.cs" />
+    <Compile Include="Filter\FinanceManage\InterestFitFilter.cs" />
+    <Compile Include="Filter\FinanceManage\PayAccountFilter.cs" />
+    <Compile Include="Filter\FinanceManage\SearchBusinessListFilter.cs" />
+    <Compile Include="Filter\FinanceManage\TimeLineInitFilter.cs" />
+    <Compile Include="Filter\FinanceManage\XtgJhzkCheckExportFilter.cs" />
+    <Compile Include="Filter\FinanceManage\XtgJhzkCheckFilter.cs" />
+    <Compile Include="ViewData\BillDun\BusinessGuaranteeItemViewData.cs" />
+    <Compile Include="ViewData\BillDun\BusinessGuaranteeViewData.cs" />
+    <Compile Include="ViewData\BillDun\BusinessGuaranteeViewDetailData.cs" />
+    <Compile Include="ViewData\BillDun\BusinessViewData.cs" />
+    <Compile Include="ViewData\BillDun\ClearLoanReasonSearchViewData.cs" />
+    <Compile Include="ViewData\BillDun\DunDetailReceiveExportViewData.cs" />
+    <Compile Include="ViewData\BillDun\EveryDueExportViewData.cs" />
+    <Compile Include="ViewData\BillDun\EveryDueRepayDetailReportViewData.cs" />
+    <Compile Include="ViewData\BillDun\EveryDueReportViewData.cs" />
+    <Compile Include="ViewData\BillDun\ExportGuaranteeViewData.cs" />
+    <Compile Include="ViewData\BillDun\RelativeDaySearchDunExportViewData.cs" />
+    <Compile Include="ViewData\BillDun\RelativeDaySearchDunViewData.cs" />
+    <Compile Include="ViewData\BillDun\SavingCardChangeBusinessViewData.cs" />
+    <Compile Include="ViewData\BillDun\GuarBusinessViewData.cs" />
+    <Compile Include="ViewData\BillDun\SavingCardChangeHistoryViewData.cs" />
+    <Compile Include="ViewData\Common\EnumerationViewData.cs" />
+    <Compile Include="ViewData\CustomerService\CustomerSearchViewData.cs" />
+    <Compile Include="ViewData\CustomerService\DeductRemindExportViewData.cs" />
+    <Compile Include="ViewData\ExamineIMP\OverDueReportDetailViewData.cs" />
+    <Compile Include="ViewData\ExamineIMP\OverDueReportViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\AdaptationCardDetailData.cs" />
+    <Compile Include="ViewData\FinanceManage\BadTransferDetailResultViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\BadTransferSearchViewData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewData\FinanceManage\BillDetailViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\BillItemDetailViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\BusinessDetailViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\BusinessExportViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\BusinessViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\CancelRefundViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\CloseBillTimeViewData.cs" />
+    <Compile Include="Filter\FinanceManage\TimeLineUpdateFilter.cs" />
+    <Compile Include="ViewData\BillDun\SavingCardChangeModifyViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\DeriveRecBankDeductViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\DeriveRecExportViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\DeriveSevExportForeignViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\DeriveSevExportReceiveViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\GuaranteeBatchViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\GuaranteeObligaBatchViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\InterestFiltViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\LatestCloseTimeViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\PayAccountResultViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\PenaltyIntViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\ReceivedCutViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\ReceiveDetailViewData.cs" />
+    <Compile Include="ViewData\FinanceManage\XtgJhzkViewData.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

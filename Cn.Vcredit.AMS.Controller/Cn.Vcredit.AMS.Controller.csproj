@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F120B2C2-1FCA-420D-890E-EDBAE2C65C8E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cn.Vcredit.AMS.Controller</RootNamespace>
+    <AssemblyName>Cn.Vcredit.AMS.Controller</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Exe\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Exe\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cn.Vcredit.AMS.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.AMS.Entity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cn.Vcredit.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cn.Vcredit.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Manager\ConfigManager.cs" />
+    <Compile Include="Manager\QueueManager.cs" />
+    <Compile Include="Manager\ServiceManager.cs" />
+    <Compile Include="Manager\ThreadPoolManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cn.Vcredit.AMS.BaseService\Cn.Vcredit.AMS.BaseService.csproj">
+      <Project>{ebb598c5-a8a8-490d-90fa-06da316dbe1c}</Project>
+      <Name>Cn.Vcredit.AMS.BaseService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cn.Vcredit.AMS.Common\Cn.Vcredit.AMS.Common.csproj">
+      <Project>{d610dc43-3590-40f7-b0a6-d8c049934af3}</Project>
+      <Name>Cn.Vcredit.AMS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cn.Vcredit.AMS.DataAccess\Cn.Vcredit.AMS.DataAccess.csproj">
+      <Project>{719039bb-08d7-4a93-a1cf-40b510a8d542}</Project>
+      <Name>Cn.Vcredit.AMS.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cn.Vcredit.AMS.Data\Cn.Vcredit.AMS.Data.csproj">
+      <Project>{6e134fef-d4ec-4c7c-bdd2-d5c364a0d5fd}</Project>
+      <Name>Cn.Vcredit.AMS.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1 @@
+update PhoneListLog set IsCurrent=0 where VisitType={0} and CompanyKey='{1}' and IsCurrent=1

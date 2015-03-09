@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9E571D68-42B5-4E20-9BC2-984693E6B97E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cn.Vcredit.Common.Excel</RootNamespace>
+    <AssemblyName>Cn.Vcredit.Common.Excel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Exe\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BIFF8.cs" />
+    <Compile Include="ByteUtil\Bits.cs" />
+    <Compile Include="ByteUtil\Bytes.cs" />
+    <Compile Include="CachedBlockRow.cs" />
+    <Compile Include="Cell.cs" />
+    <Compile Include="CellCoordinate.cs" />
+    <Compile Include="Cells.cs" />
+    <Compile Include="CellTypes.cs" />
+    <Compile Include="CharacterSets.cs" />
+    <Compile Include="Color.cs" />
+    <Compile Include="Colors.cs" />
+    <Compile Include="ColumnInfo.cs" />
+    <Compile Include="EscapementTypes.cs" />
+    <Compile Include="Extend\ExportExtend.cs" />
+    <Compile Include="Font.cs" />
+    <Compile Include="FontFamilies.cs" />
+    <Compile Include="Fonts.cs" />
+    <Compile Include="FontWeight.cs" />
+    <Compile Include="Format.cs" />
+    <Compile Include="Formats.cs" />
+    <Compile Include="FormulaRecord.cs" />
+    <Compile Include="HorizontalAlignments.cs" />
+    <Compile Include="IXFTarget.cs" />
+    <Compile Include="LineStyle.cs" />
+    <Compile Include="MergeArea.cs" />
+    <Compile Include="Ole2\Directory.cs" />
+    <Compile Include="Ole2\Header.cs" />
+    <Compile Include="Ole2\Metadata\DocumentSummaryInformationSection.cs" />
+    <Compile Include="Ole2\Metadata\Header.cs" />
+    <Compile Include="Ole2\Metadata\MetadataStream.cs" />
+    <Compile Include="Ole2\Metadata\OriginOperatingSystems.cs" />
+    <Compile Include="Ole2\Metadata\OriginOperatingSystemVersions.cs" />
+    <Compile Include="Ole2\Metadata\Property.cs" />
+    <Compile Include="Ole2\Metadata\PropertyList.cs" />
+    <Compile Include="Ole2\Metadata\Section.cs" />
+    <Compile Include="Ole2\Metadata\SectionList.cs" />
+    <Compile Include="Ole2\Metadata\SummaryInformationSection.cs" />
+    <Compile Include="Ole2\Msat.cs" />
+    <Compile Include="Ole2\Ole2Document.cs" />
+    <Compile Include="Ole2\Sat.cs" />
+    <Compile Include="Ole2\Ssat.cs" />
+    <Compile Include="Ole2\Stream.cs" />
+    <Compile Include="Ole2\Streams.cs" />
+    <Compile Include="Palette.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Record.cs" />
+    <Compile Include="RID.cs" />
+    <Compile Include="Row.cs" />
+    <Compile Include="RowBlocks.cs" />
+    <Compile Include="Rows.cs" />
+    <Compile Include="SharedStringTable.cs" />
+    <Compile Include="StandardFormats.cs" />
+    <Compile Include="Style.cs" />
+    <Compile Include="Styles.cs" />
+    <Compile Include="TextDirections.cs" />
+    <Compile Include="TextRotations.cs" />
+    <Compile Include="UnderlineTypes.cs" />
+    <Compile Include="UnicodeBytes.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="VerticalAlignments.cs" />
+    <Compile Include="Workbook.cs" />
+    <Compile Include="Worksheet.cs" />
+    <Compile Include="Worksheets.cs" />
+    <Compile Include="WorksheetTypes.cs" />
+    <Compile Include="WorksheetVisibilities.cs" />
+    <Compile Include="XF.cs" />
+    <Compile Include="XFs.cs" />
+    <Compile Include="XlsDocument.cs" />
+    <Compile Include="XlsText.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

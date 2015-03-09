@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D610DC43-3590-40F7-B0A6-D8C049934AF3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cn.Vcredit.AMS.Common</RootNamespace>
+    <AssemblyName>Cn.Vcredit.AMS.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Exe\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Exe\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cn.Vcredit.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MemCompressor, Version=1.0.0.3, Culture=neutral, PublicKeyToken=d7dc4571284f76c3">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\MemCompressor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consts\Const.cs" />
+    <Compile Include="Consts\ContractSide.cs" />
+    <Compile Include="Consts\SqlFile.cs" />
+    <Compile Include="Data\PriorityQueue.cs" />
+    <Compile Include="Data\RequestQueue.cs" />
+    <Compile Include="Define\DelegataDefine.cs" />
+    <Compile Include="Dictionary\SubjectDictionary.cs" />
+    <Compile Include="Enums\EnumAdjustKind.cs" />
+    <Compile Include="Enums\EnumBillKind.cs" />
+    <Compile Include="Enums\EnumBillRegion.cs" />
+    <Compile Include="Enums\EnumBillStatus.cs" />
+    <Compile Include="Enums\EnumBusinessStatus.cs" />
+    <Compile Include="Enums\EnumCallDirectionKind.cs" />
+    <Compile Include="Enums\EnumCloanApplyKind.cs" />
+    <Compile Include="Enums\EnumCloanApplyStatus.cs" />
+    <Compile Include="Enums\EnumCLoanStatus.cs" />
+    <Compile Include="Enums\EnumCompanyKey.cs" />
+    <Compile Include="Enums\EnumContractSide.cs" />
+    <Compile Include="Enums\EnumCostSubject.cs" />
+    <Compile Include="Enums\EnumDeductSeqKind.cs" />
+    <Compile Include="Enums\EnumDunMark.cs" />
+    <Compile Include="Enums\EnumExportCmdKind.cs" />
+    <Compile Include="Enums\EnumImportCmdKind.cs" />
+    <Compile Include="Enums\EnumIncomeType.cs" />
+    <Compile Include="Enums\EnumLawsuitStatus.cs" />
+    <Compile Include="Enums\EnumPayKind.cs" />
+    <Compile Include="Enums\EnumProductKind.cs" />
+    <Compile Include="Enums\EnumRequestState.cs" />
+    <Compile Include="Enums\EnumSubjectKind.cs" />
+    <Compile Include="Enums\OrgType.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlConfigData\ServiceMap.cs" />
+    <Compile Include="XmlConfigData\ServiceConfigs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+    <Folder Include="Module\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

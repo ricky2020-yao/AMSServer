@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\inetpub\wwwroot\Cn.Vcredit.AMS.WebService" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="02/09/2015 10:17:56" />
+    <file relUrl="bin/Cn.Vcredit.AMS.Entity.pdb" publishTime="01/16/2015 10:29:34" />
+    <file relUrl="Service/VcreditService.asmx" publishTime="08/15/2014 15:33:14" />
+    <file relUrl="bin/Cn.Vcredit.AMS.Common.pdb" publishTime="01/16/2015 10:28:30" />
+    <file relUrl="bin/Cn.Vcredit.AMS.Common.dll" publishTime="01/16/2015 10:28:30" />
+    <file relUrl="bin/Cn.Vcredit.AMS.WebService.pdb" publishTime="02/09/2015 10:17:55" />
+    <file relUrl="bin/Cn.Vcredit.AMS.Data.dll" publishTime="01/16/2015 10:28:30" />
+    <file relUrl="bin/Aspose.Pdf.Kit.dll" publishTime="07/25/2014 16:57:35" />
+    <file relUrl="bin/ICSharpCode.SharpZipLib.dll" publishTime="08/04/2014 16:05:51" />
+    <file relUrl="bin/Cn.Vcredit.AMS.BaseService.dll" publishTime="01/16/2015 10:28:31" />
+    <file relUrl="Service/ResultService.asmx" publishTime="08/20/2014 17:27:28" />
+    <file relUrl="bin/Cn.Vcredit.AMS.Data.pdb" publishTime="01/16/2015 10:28:30" />
+    <file relUrl="bin/log4net.dll" publishTime="06/19/2014 15:05:24" />
+    <file relUrl="bin/Cn.Vcredit.AMS.Controller.pdb" publishTime="01/16/2015 10:28:32" />
+    <file relUrl="bin/Cn.Vcredit.AMS.Controller.dll" publishTime="01/16/2015 10:28:32" />
+    <file relUrl="bin/Cn.Vcredit.Data.dll" publishTime="10/22/2014 11:54:52" />
+    <file relUrl="Service/BaseWebService.asmx" publishTime="08/15/2014 15:32:42" />
+    <file relUrl="bin/Cn.Vcredit.Common.pdb" publishTime="12/01/2014 17:42:57" />
+    <file relUrl="bin/MemCompressor.dll" publishTime="01/21/2013 09:45:45" />
+    <file relUrl="bin/Aspose.Words.dll" publishTime="06/19/2014 15:05:36" />
+    <file relUrl="bin/Cn.Vcredit.AMS.WebService.dll" publishTime="02/09/2015 10:17:56" />
+    <file relUrl="bin/Cn.Vcredit.AMS.BaseService.pdb" publishTime="01/16/2015 10:28:31" />
+    <file relUrl="bin/Aspose.Cells.dll" publishTime="06/19/2014 15:05:31" />
+    <file relUrl="bin/Cn.Vcredit.Common.dll" publishTime="12/10/2014 14:53:26" />
+    <file relUrl="bin/Cn.Vcredit.AMS.Entity.dll" publishTime="01/16/2015 10:29:34" />
+  </publishProfile>
+</publishData>

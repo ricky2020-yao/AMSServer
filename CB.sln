@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cn.Vcredit.AMS.OnlineService", "Cn.Vcredit.AMS.OnlineService\Cn.Vcredit.AMS.OnlineService.csproj", "{0A8EA5F1-D676-4605-A42E-1DAF74476737}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cn.Vcredit.AMS.Entity", "Cn.Vcredit.AMS.Entity\Cn.Vcredit.AMS.Entity.csproj", "{3A8521A0-4161-4D80-856E-8B3EE14E1725}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cn.Vcredit.AMS.GuarBusinessSearchService", "Cn.Vcredit.AMS.GuarBusinessSearchService\Cn.Vcredit.AMS.GuarBusinessSearchService.csproj", "{9C89CBF2-B710-4DB2-9BE4-7794578F83C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cn.Vcredit.AMS.DictionaryService", "Cn.Vcredit.AMS.DictionaryService\Cn.Vcredit.AMS.DictionaryService.csproj", "{116B2756-B29F-4D2F-AF52-81AE3E232186}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cn.Vcredit.AMS.BaseService", "Cn.Vcredit.AMS.BaseService\Cn.Vcredit.AMS.BaseService.csproj", "{EBB598C5-A8A8-490D-90FA-06DA316DBE1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cn.Vcredit.AMS.EveryDueRepayReportService", "Cn.Vcredit.AMS.EveryDueRepayReportService\Cn.Vcredit.AMS.EveryDueRepayReportService.csproj", "{D49A87BC-3BB4-4C79-BF60-6686082E4D1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cn.Vcredit.AMS.DeductRemindService", "Cn.Vcredit.AMS.DeductRemindService\Cn.Vcredit.AMS.DeductRemindService.csproj", "{87EFD9F2-F3B5-424B-8906-B95CD5DB95E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cn.Vcredit.AMS.GuarLitigationService", "Cn.Vcredit.AMS.GuarLitigationService\Cn.Vcredit.AMS.GuarLitigationService.csproj", "{B3E97BAD-35FD-41C4-8F67-75A24A983C46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cn.Vcredit.AMS.EveryDueReportService", "Cn.Vcredit.AMS.EveryDueReportService\Cn.Vcredit.AMS.EveryDueReportService.csproj", "{84B9935B-5048-4521-AA04-CB97C6F876E3}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A8EA5F1-D676-4605-A42E-1DAF74476737}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A8EA5F1-D676-4605-A42E-1DAF74476737}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A8EA5F1-D676-4605-A42E-1DAF74476737}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A8EA5F1-D676-4605-A42E-1DAF74476737}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A8521A0-4161-4D80-856E-8B3EE14E1725}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A8521A0-4161-4D80-856E-8B3EE14E1725}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A8521A0-4161-4D80-856E-8B3EE14E1725}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A8521A0-4161-4D80-856E-8B3EE14E1725}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C89CBF2-B710-4DB2-9BE4-7794578F83C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C89CBF2-B710-4DB2-9BE4-7794578F83C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C89CBF2-B710-4DB2-9BE4-7794578F83C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C89CBF2-B710-4DB2-9BE4-7794578F83C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{116B2756-B29F-4D2F-AF52-81AE3E232186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{116B2756-B29F-4D2F-AF52-81AE3E232186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{116B2756-B29F-4D2F-AF52-81AE3E232186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{116B2756-B29F-4D2F-AF52-81AE3E232186}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBB598C5-A8A8-490D-90FA-06DA316DBE1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBB598C5-A8A8-490D-90FA-06DA316DBE1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBB598C5-A8A8-490D-90FA-06DA316DBE1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBB598C5-A8A8-490D-90FA-06DA316DBE1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D49A87BC-3BB4-4C79-BF60-6686082E4D1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D49A87BC-3BB4-4C79-BF60-6686082E4D1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D49A87BC-3BB4-4C79-BF60-6686082E4D1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D49A87BC-3BB4-4C79-BF60-6686082E4D1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87EFD9F2-F3B5-424B-8906-B95CD5DB95E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87EFD9F2-F3B5-424B-8906-B95CD5DB95E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87EFD9F2-F3B5-424B-8906-B95CD5DB95E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87EFD9F2-F3B5-424B-8906-B95CD5DB95E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3E97BAD-35FD-41C4-8F67-75A24A983C46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3E97BAD-35FD-41C4-8F67-75A24A983C46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3E97BAD-35FD-41C4-8F67-75A24A983C46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3E97BAD-35FD-41C4-8F67-75A24A983C46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84B9935B-5048-4521-AA04-CB97C6F876E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84B9935B-5048-4521-AA04-CB97C6F876E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84B9935B-5048-4521-AA04-CB97C6F876E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84B9935B-5048-4521-AA04-CB97C6F876E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

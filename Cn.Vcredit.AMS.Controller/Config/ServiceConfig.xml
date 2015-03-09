@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<root>
+  <ServiceMap ServiceId ="1">
+    <ServiceName>OutPayBankInstructionService</ServiceName>
+    <Priority>1</Priority>
+  </ServiceMap>
+  <ServiceMap ServiceId ="2">
+    <ServiceName>BadTransferSearchService</ServiceName>
+    <Priority>1</Priority>
+  </ServiceMap>
+  <ServiceMap ServiceId ="3">
+    <ServiceName>BadTransferDetailService</ServiceName>
+    <Priority>1</Priority>
+  </ServiceMap>
+  <ServiceMap ServiceId ="4">
+    <ServiceName>BadTransferRejectService</ServiceName>
+    <Priority>1</Priority>
+  </ServiceMap>
+</root>

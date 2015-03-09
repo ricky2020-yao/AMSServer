@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{719039BB-08D7-4A93-A1CF-40B510A8D542}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cn.Vcredit.AMS.DataAccess</RootNamespace>
+    <AssemblyName>Cn.Vcredit.AMS.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Exe\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Exe\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cn.Vcredit.AMS.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.AMS.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Cn.Vcredit.AMS.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.AMS.Entity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cn.Vcredit.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cn.Vcredit.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\Cn.Vcredit.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=1.7.0.4714, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\MongoDB.Bson.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=1.7.0.4714, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exe\MongoDB.Driver.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\Exe\ServiceStack.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>..\Exe\ServiceStack.Interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Redis">
+      <HintPath>..\Exe\ServiceStack.Redis.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\Exe\ServiceStack.Text.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\DivisionBLL.cs" />
+    <Compile Include="BLL\PermissionBLL.cs" />
+    <Compile Include="BLL\Redis\RedisEnumOperatorBLL.cs" />
+    <Compile Include="BLL\RegionBLL.cs" />
+    <Compile Include="Caches\AccountOrgPermissionCache.cs" />
+    <Compile Include="Caches\AccountOrgPermissionFromMongo.cs" />
+    <Compile Include="Caches\BankAccountsCache.cs" />
+    <Compile Include="Caches\CompanyCache.cs" />
+    <Compile Include="Caches\DivisionCache.cs" />
+    <Compile Include="Caches\EnumerationCache.cs" />
+    <Compile Include="Caches\RegionCache.cs" />
+    <Compile Include="Common\DataAccessConsts.cs" />
+    <Compile Include="Common\DataAccessUtility.cs" />
+    <Compile Include="DAL\BusinessDal.cs" />
+    <Compile Include="DAL\CacheDal.cs" />
+    <Compile Include="DAL\DeductSequenceDal.cs" />
+    <Compile Include="DAL\DivisionDal.cs" />
+    <Compile Include="DAL\DivisionDalFromMongo.cs" />
+    <Compile Include="DAL\DunDal.cs" />
+    <Compile Include="DAL\EnumerationDal.cs" />
+    <Compile Include="DAL\EnumerationDalFromMongo.cs" />
+    <Compile Include="DAL\PayBankDal.cs" />
+    <Compile Include="DAL\PayTraceDal.cs" />
+    <Compile Include="DAL\PermissionDal.cs" />
+    <Compile Include="DAL\PermissionDalFromMongo.cs" />
+    <Compile Include="DAL\Redis\RedisEnumOperatorDAL.cs" />
+    <Compile Include="DAL\SavingCardChangeFilter.cs" />
+    <Compile Include="DAL\SyncDal.cs" />
+    <Compile Include="Mongo\BaseMongo.cs" />
+    <Compile Include="Mongo\BusinessInfo.cs" />
+    <Compile Include="Mongo\CustomerInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Redis\RedisConfigInfo.cs" />
+    <Compile Include="Redis\RedisManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cn.Vcredit.AMS.Data\Cn.Vcredit.AMS.Data.csproj">
+      <Project>{6e134fef-d4ec-4c7c-bdd2-d5c364a0d5fd}</Project>
+      <Name>Cn.Vcredit.AMS.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

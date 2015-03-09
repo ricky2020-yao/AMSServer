@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<root>
+  <ServiceMap ServiceId ="1">
+    <ServiceName>BadTransferAuditService</ServiceName>
+    <Priority>1</Priority>
+    <Description>坏账清贷审核通过服务</Description>
+  </ServiceMap>
+  <ServiceMap ServiceId ="2">
+    <ServiceName>BadTransferSearchService</ServiceName>
+    <Priority>1</Priority>
+    <Description>坏账清贷检索服务</Description>
+  </ServiceMap>
+  <ServiceMap ServiceId ="3">
+    <ServiceName>BadTransferDetailService</ServiceName>
+    <Priority>1</Priority>
+    <Description>获取坏账清贷详细信息服务</Description>
+  </ServiceMap>  
+  <ServiceMap ServiceId ="4">
+    <ServiceName>BadTransferRejectService</ServiceName>
+    <Priority>1</Priority>
+    <Description>坏账清贷拒绝服务</Description>
+  </ServiceMap>
+  <ServiceMap ServiceId ="5">
+    <ServiceName>TimeLineInitService</ServiceName>
+    <Priority>1</Priority>
+    <Description>时间轴设置数据初始化服务</Description>
+  </ServiceMap>
+  <ServiceMap ServiceId ="6">
+    <ServiceName>TimeLineUpdateSeqService</ServiceName>
+    <Priority>1</Priority>
+    <Description>时间轴设置更新序列服务</Description>
+  </ServiceMap>
+  <ServiceMap ServiceId ="7">
+    <ServiceName>TimeLineUpdateCloseDayService</ServiceName>
+    <Priority>1</Priority>
+    <Description>时间轴设置更新关帐日服务</Description>
+  </ServiceMap>
+  <ServiceMap ServiceId ="8">
+    <ServiceName>TimeLineCloseDayInitService</ServiceName>
+    <Priority>1</Priority>
+    <Description>时间轴设置关帐日初始化服务</Description>
+  </ServiceMap>
+  <ServiceMap ServiceId ="9">
+    <ServiceName>HandDeductService</ServiceName>
+    <Priority>1</Priority>
+    <Description></Description>
+  </ServiceMap>
+  <ServiceMap ServiceId ="10">
+    <ServiceName>HandDeductQueryService</ServiceName>
+    <Priority>1</Priority>
+    <Description></Description>
+  </ServiceMap>
+  <ServiceMap ServiceId ="11">
+    <ServiceName>XtgJhzkCheckSearchService</ServiceName>
+    <Priority>1</Priority>
+    <Description>信托归集户账款核对查询服务</Description>
+  </ServiceMap>
+  <ServiceMap ServiceId ="12">
+    <ServiceName>UpdateXtgJhzkToAcountTimeService</ServiceName>
+    <Priority>1</Priority>
+    <Description>信托归集户账款核对清除到账日期服务</Description>
+  </ServiceMap>
+  <ServiceMap ServiceId ="13">
+    <ServiceName>ClearXtgJhzkToAcountTimeService</ServiceName>
+    <Priority>1</Priority>
+    <Description>信托归集户账款核对更新到账日期服务</Description>
+  </ServiceMap>
+  <ServiceMap ServiceId ="14">
+    <ServiceName>BusinesssDataExportService</ServiceName>
+    <Priority>1</Priority>
+    <Description>订单筛选导出服务</Description>
+  </ServiceMap>
+  <ServiceMap ServiceId ="15">
+    <ServiceName>QueryGuarBusinessService</ServiceName>
+    <Priority>1</Priority>
+    <Description></Description>
+  </ServiceMap>
+  <ServiceMap ServiceId ="20">
+    <ServiceName>GetOverDueReportSearchResultService</ServiceName>
+    <Priority>1</Priority>
+    <Description>审核员贷后客户逾期情况日报表查询服务</Description>
+  </ServiceMap>
+  <ServiceMap ServiceId ="21">
+    <ServiceName>GetOverDueTotalSearchResultService</ServiceName>
+    <Priority>1</Priority>
+    <Description>审核员贷后客户逾期情况汇总情况表查询服务</Description>
+  </ServiceMap>
+  <ServiceMap ServiceId ="22">
+    <ServiceName>GetOverDueReportDetailByBusinessIdsService</ServiceName>
+    <Priority>1</Priority>
+    <Description>根据订单号获取订单的逾期信息服务</Description>
+  </ServiceMap>
+  <ServiceMap ServiceId ="23">
+    <ServiceName>GetOverDueReportDetailService</ServiceName>
+    <Priority>1</Priority>
+    <Description>获取订单的详情信息服务</Description>
+  </ServiceMap>
+  <ServiceMap ServiceId ="24">
+    <ServiceName>UpdateOverDueInfoReadStateService</ServiceName>
+    <Priority>1</Priority>
+    <Description>更新逾期读取状态标志服务</Description>
+  </ServiceMap>
+</root>
